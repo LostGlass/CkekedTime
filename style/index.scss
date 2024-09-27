@@ -1,0 +1,430 @@
+$fontFamily: "Courier New", Courier, monospace;
+$mainColor: rgba(124, 14, 124, 0.658);
+$mainColorUpWindow:rgba(124, 14, 124, 0.952);
+$mainBoxShadow:  0px 8px  20px 2px gold;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(./IMG/sunset-beach-tree-scenery-digital-art-4k-wallpaper-uhdpaper.com-184@1@n.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.button_stop_time.active{
+  display: block;
+}
+
+.button_start_time.active {
+  display: none;
+}
+.action_confirmation.active{
+  display: flex;
+}
+
+.pop_up_icons.active{
+  display: flex;
+}
+
+.wrap_button_action_confirmation{
+  display: flex;
+}
+
+
+
+
+//БЛОК ОКНА РЕГИСТРАЦИИ(НАЧАЛО//
+
+
+//БЛОК ОКНА РЕГИСТРАЦИИ(КОНЕЦ)//
+
+
+
+.global_wrap_time {
+  width: 300px;
+  height: 100px;
+  background-color: $mainColor;
+  border-radius: 8px;
+  border: 1px solid gold;
+  box-shadow: $mainBoxShadow;
+  z-index: 1;
+  
+
+  .wrap_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .mein_timer_wrap {
+    width: 73px;
+    border: 1px solid black;
+    margin-top: 10%;
+    border: none;
+    
+
+    .mein_timer {
+      position: relative;
+      left: 5px;
+      color: rgb(250, 250, 250);
+      width: 65px;
+      font-family: $fontFamily;
+      background-color: rgba(22, 194, 80, 0);
+      border: none;
+      display: inline;
+    }
+    .mein_timer.active{
+     color: gold;
+      animation-name: blinker;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+      animation-duration:1s;
+      -webkit-animation-name: blinker;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+      -webkit-animation-duration: 1s;
+    }
+     
+    @keyframes blinker {
+      from { box-shadow: 0px 0px  7px 2px gold;}
+      to {  }
+      
+    }
+     
+    @-webkit-keyframes blinker {
+      from {box-shadow: 0px 0px  7px 2px gold;}
+      to { }
+    }
+    
+    
+    }
+}
+.wrap_button_time {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.button_start_time {
+  color: rgb(253, 255, 252);
+  font-family: $fontFamily;
+  cursor: pointer;
+  border-bottom: 1.5px solid rgb(253, 252, 252);
+  border-radius: 5px;
+  padding: 1px;
+  display: block;
+  background-image: linear-gradient(orange, orange);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+
+  &:hover {
+    color: rgb(129, 255, 4);
+    border-bottom: 1.5px solid rgb(129, 255, 4);
+    background-size: 100% 100%;
+  }
+}
+
+.button_stop_time {
+  margin-left: 10px;
+  font-family: $fontFamily;
+  color: rgb(250, 250, 250);
+  cursor: pointer;
+  border-bottom: 1.5px solid rgb(255, 254, 254);
+  border-radius: 5px;
+  padding: 1px;
+  display: none;
+  background-image: linear-gradient(orange, orange);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+
+  &:hover {
+    color: rgb(255, 1, 1);
+    border-bottom: 1.5px solid rgb(255, 1, 1);
+    background-size: 100% 100%;
+  }
+}
+
+.wrap_social_links {
+  display: flex;
+}
+.social_links {
+  position: relative;
+  cursor: pointer;
+  border-top: 1px solid white;
+  border-radius: 8px;
+  left: 170px;
+  top: 18px;
+  width: 30px;
+  height: 10px;
+  padding-left: 5px;
+  margin-left: 5px;
+  transition: 0.3s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 0;
+    height: 0;
+    box-shadow: 4px 4px 20px;
+    border: 0.5px solid white;
+    border-radius: 8px;
+    display: none;
+  }
+
+  &:hover {
+    height: 30px;
+    border-bottom: 0.5px solid white;
+    background-color: $mainColor;
+    transition: 0.3s all;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      display: block;
+    }
+
+    .social_links::before {
+      content: "";
+      width: 100%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+      filter: blur();
+      background: linear-gradient(
+        to left,
+        transparent 0%,
+        #fff 40%,
+        #fff 60%,
+        transparent 100%
+      );
+      transform: translate(-100%, -25%) rotate(10deg);
+      animation: blick 5s infinite;
+    }
+    @keyframes blick {
+      0% {
+        transform: translate(-100%, -25%) rotate(10deg);
+      }
+      20% {
+        transform: translate(100%, -25%) rotate(10deg);
+      }
+      100% {
+        transform: translate(100%, -25%) rotate(10deg);
+      }
+    }
+  }
+}
+
+//!! Всплывающие окно при закрытии секундомера крестиком(НАЧАЛО БЛОКА) !!
+
+.action_confirmation{
+position: absolute;
+z-index: 6;
+width: 350px;
+height: 120px;
+background-color: $mainColorUpWindow;
+border-radius: 10px;
+border: 1px solid gold;
+box-shadow: $mainBoxShadow;
+align-items: center;
+justify-content: center;
+display: none;
+
+
+.txt_action_confirmation{
+  position: absolute;
+  display: flex;
+  z-index: 7;
+  top: 0;
+  margin-top: 15px;
+  padding: 1px 10px 1px 10px ;
+  color: rgb(253, 255, 252);
+  font-family: $fontFamily;
+  border-bottom: 1.5px solid rgb(253, 252, 252);
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px  white;
+  cursor:context-menu;
+  transition: 0.3s all;
+  
+  &:hover{
+    box-shadow: 1px 1px 10px  gold;
+    border-bottom: 1.5px solid gold;
+    color: gold;
+    transition: 0.3s all;
+  }
+  img{
+    width: 13px;
+    height: 13px;
+    margin-top: 2px ;
+  }
+}
+
+
+
+.button_yes,.button_no{
+  color: rgb(253, 255, 252);
+  z-index: 7;
+  font-family: $fontFamily;
+  cursor: pointer;
+  margin-left: 20px;
+  border-bottom: 1.5px solid rgb(253, 252, 252);
+  border-radius: 5px;
+  padding: 1px;
+  background-image: linear-gradient(rgb(255, 165, 0),gold);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+
+}
+
+.button_yes:hover{
+  color: rgb(115, 255, 0);
+  border-bottom: 1.5px solid  rgb(115, 255, 0);
+  background-size: 100% 100%;
+}
+.button_no:hover {
+  color: rgb(255, 0, 0);
+  border-bottom: 1.5px solid  rgb(255, 0, 0);
+  background-size: 100% 100%;
+}
+
+.img_warning_action_confirmation{
+  z-index: 6;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  
+}
+
+
+}
+
+//!!  !Всплывающие окно при закрытии секундомера крестиком(КОНЕЦ БЛОКА!
+
+
+.pop_up_icons {
+position: absolute;
+z-index: 5;
+width: 350px;
+height: 120px;
+background-color: $mainColorUpWindow;
+border-radius: 10px;
+border: 1px solid gold;
+box-shadow: $mainBoxShadow;
+align-items: center;
+justify-content: center;
+display: none;
+
+.save_time{
+  color: rgb(253, 255, 252);
+  font-family: $fontFamily;
+  cursor: pointer;
+  margin-left: 5px;
+  border-bottom: 1.5px solid rgb(253, 252, 252);
+  border-radius: 5px;
+  padding: 1px;
+  background-image: linear-gradient(orange,gold);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+
+  
+
+  &:hover {
+    color: rgb(115, 255, 0);
+    border-bottom: 1.5px solid  rgb(115, 255, 0);
+    background-size: 100% 100%;
+  }
+}
+
+.reset_time{
+  color: rgb(253, 255, 252);
+  font-family: $fontFamily;
+  cursor: pointer;
+  margin-left: 5px;
+  border-bottom: 1.5px solid rgb(253, 252, 252);
+  border-radius: 5px;
+  padding: 1px;
+  background-image: linear-gradient(orange,gold);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+
+  &:hover {
+    color: rgb(255, 115, 0);
+    border-bottom: 1.5px solid rgb(255, 0, 0);
+    background-size: 100% 100%;
+  }
+}
+
+.close_pop_up_icons{
+position: absolute;
+right: 0;
+top: 0;
+margin: 13px;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+img{
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #ffffff73;
+  transition: 0.5s all;
+  background-image: linear-gradient(orange,gold);
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  box-shadow: 1px 1px 10px  white;
+  
+
+  &:hover{
+    background-color: #2221219a;
+    transition: 0.5s all;
+    transform: rotate(360deg);
+    background-size: 100% 100%;
+    
+  }
+}
+}
+.timer_form_wariableJS{
+position: absolute;
+display: flex;
+z-index: 7;
+top: 0;
+width: 73px;
+border: 1px solid black;
+margin-top: 8%;
+font-weight:700 ;
+border: none;
+color: rgb(255, 230, 1);
+width: 65px;
+font-family: $fontFamily;
+background-color: rgba(22, 194, 80, 0);
+border: none;
+display: inline;
+}
+}
+
+

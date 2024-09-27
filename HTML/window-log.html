@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/style/window-regist-user.css" />
+    <script src="/JS/window-regist-animatoin.js" defer></script>
+    </script>
+  </head>
+  <body>
+    <span class="line_left"></span>
+    <span class="line_top"></span>
+    <div class="wrap_registr_form" id="parental_hover_id">
+      <div class="position_registration_window">
+        <div class="Heading_regisr_form">
+          <h3>Sign in</h3>
+        </div>
+        <div class="wrap_input_registr">
+          <div class="wrap_input_registr_login">
+            <img src="/style/IMG/ikons/login.png" alt="login ikons" />
+            <input
+              placeholder="Name"
+              type="text"
+              title="Login field"
+              id="input_login"
+              class="login"
+              oninput="funcAnimationInputLoginCalor()"
+              maxlength="10"
+            />
+          </div>
+          <div class="wrap_input_registr_password">
+            <img src="/style/IMG/ikons/password.png" alt="password ikons" />
+            <input
+              placeholder="Password"
+              type="password"
+              title="Password field"
+              id="input_password"
+              class="password"
+              oninput="funcAnimationInputPasswordCalor()"
+              maxlength="10"
+            />
+            <img
+              src="/style/IMG/ikons/clos_Eye.png"
+              alt="crossed-eye icon close-eye"
+              class="close_eye_password"
+              id="close_eyeId"
+              title="Show password"
+            />
+            <img
+              src="/style/IMG/ikons/open_Eye.png"
+              alt="crossed-eye icon open-eye"
+              class="open_eye_password"
+              id="open_eyeId"
+              title="Hide password"
+            />
+          </div>
+          <div class="wrap_button_lo_and_registr">
+            <div class="button_log">
+              <button>Login to the site</button>
+            </div>
+            <div>
+              <button>
+                <a href="/HTML/window-registr-user.html"
+                  >Back to registration</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="restore_password_and_toComeIn">
+          <div class="login_using">
+            <h5 style="margin-left: 18px" id="login_using">
+              <span>Login</span> using...
+            </h5>
+          </div>
+          <div class="forgot_password">
+            <h5 id="forgot_password_id" class="vanich_forgot_password_id">
+              Forgot your <span>password? </span>
+            </h5>
+            <div
+              class="forgot_your_password_mail"
+              id="forgot_your_passwor_mail_id"
+            >
+              <img src="/style/IMG/ikons/mail.png" alt="mail ikons" />
+              <input
+                placeholder="Mail"
+                type="email"
+                title="Mail field"
+                id="input_mail"
+                class="mail"
+              />
+              <button
+                class="button_remove_vanich_mail"
+                id="button_remove_vanich_mail"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="wrap_zone_login_using" id="wrap_zone_login_using">
+          <div class="telegram" id="telegram">
+            <a href="https://web.telegram.org/k/" target="_blank"
+              ><img src="/style/IMG/ikons/telega.png" alt="telegram_link"
+            /></a>
+          </div>
+          <div class="instagram" id="instagram">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="/style/IMG/ikons/inst.png" alt="instagram_link"
+            /></a>
+          </div>
+          <div class="twitter" id="twitter">
+            <a href="https://twitter.com/?lang=ru" target="_blank"
+              ><img src="/style/IMG/ikons/twitter.png" alt="twitter_link"
+            /></a>
+          </div>
+        </div>
+        <footer
+          class="foter_form_regist_window"
+          style="top: 168px; position: relative"
+        >
+          <div class="foter_form_regist">
+            <div class="cross" id="dont_save">
+              <img src="/style/IMG/ikons/close.png" alt="Cross icon" />
+            </div>
+            <div class="check_mark" id="save">
+              <img src="/style/IMG/ikons/galoschka.png" alt="check mark icon" />
+            </div>
+            <div class="content_footer" id="save_or_not"></div>
+          </div>
+          <div class="remember_data">Remember my details when registering</div>
+        </footer>
+      </div>
+    </div>
+    <span class="line_bottom"></span>
+    <span class="line_right"></span>
+  </body>
+</html>

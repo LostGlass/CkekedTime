@@ -1,0 +1,688 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(/style/IMG/island-night-moon-scenery-digital-art-2k-wallpaper-uhdpaper.com-289@0@j.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #e6b333;
+}
+
+input {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  padding-left: 5px;
+  color: rgba(250, 235, 215, 0.651);
+}
+
+input::-moz-placeholder {
+  padding-left: 5px;
+  color: rgba(250, 235, 215, 0.651);
+}
+
+input:-ms-input-placeholder {
+  padding-left: 5px;
+  color: rgba(250, 235, 215, 0.651);
+}
+
+input::-ms-input-placeholder {
+  padding-left: 5px;
+  color: rgba(250, 235, 215, 0.651);
+}
+
+input::placeholder {
+  padding-left: 5px;
+  color: rgba(250, 235, 215, 0.651);
+}
+
+.wrap_registr_form {
+  width: 380px;
+  height: 400px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: rgba(26, 31, 37, 0.7333333333);
+}
+
+.wrap_registr_form.active {
+  margin: 15px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.position_registration_window {
+  top: 20px;
+  position: relative;
+}
+
+.Heading_regisr_form {
+  bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap_input_registr {
+  left: 15px;
+  top: 10px;
+  border: none;
+  display: inline;
+  position: relative;
+  background-color: rgba(26, 31, 37, 0);
+}
+
+.login {
+  border: none;
+  color: #e6b333;
+  margin-bottom: 8px;
+  background-color: rgba(250, 235, 215, 0.137);
+}
+.login:focus {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7), 2px 4px 8px 0px rgba(0, 255, 255, 0.7), 2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7), 2px 4px 8px 0px rgba(0, 255, 255, 0.7), 2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+}
+
+.login.active_red {
+  color: rgba(255, 0, 0, 0.7);
+}
+.login.active_red:focus {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  color: rgba(255, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7), 1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7), 2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7), 1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7), 2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+}
+
+.login.active_green {
+  color: rgba(102, 255, 0, 0.7);
+}
+.login.active_green:focus {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  color: rgba(102, 255, 0, 0.7);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(102, 255, 0, 0.7), 1px 2px 4px 0px rgba(102, 255, 0, 0.7), 2px 4px 8px 0px rgba(102, 255, 0, 0.7), 2px 4px 16px 0px rgba(102, 255, 0, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(102, 255, 0, 0.7), 1px 2px 4px 0px rgba(102, 255, 0, 0.7), 2px 4px 8px 0px rgba(102, 255, 0, 0.7), 2px 4px 16px 0px rgba(102, 255, 0, 0.7);
+}
+
+.password {
+  border: none;
+  color: #e6b333;
+  margin-bottom: 8px;
+  background-color: rgba(250, 235, 215, 0.137);
+}
+.password:focus {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7), 2px 4px 8px 0px rgba(0, 255, 255, 0.7), 2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7), 2px 4px 8px 0px rgba(0, 255, 255, 0.7), 2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+}
+
+.password.active_red {
+  color: rgba(255, 0, 0, 0.7);
+}
+.password.active_red:focus {
+  color: rgba(255, 0, 0, 0.7);
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7), 1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7), 2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7), 1px 2px 4px 0px rgba(255, 0, 0, 0.7), 2px 4px 8px 0px rgba(255, 0, 0, 0.7), 2px 4px 16px 0px rgba(255, 0, 0, 0.7);
+}
+
+.password.active_green {
+  color: rgba(102, 255, 0, 0.7);
+}
+.password.active_green:focus {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  color: rgba(102, 255, 0, 0.7);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(102, 255, 0, 0.7), 1px 2px 4px 0px rgba(102, 255, 0, 0.7), 2px 4px 8px 0px rgba(102, 255, 0, 0.7), 2px 4px 16px 0px rgba(102, 255, 0, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(102, 255, 0, 0.7), 1px 2px 4px 0px rgba(102, 255, 0, 0.7), 2px 4px 8px 0px rgba(102, 255, 0, 0.7), 2px 4px 16px 0px rgba(102, 255, 0, 0.7);
+}
+
+.mail {
+  border: none;
+  color: #e6b333;
+  background-color: rgba(250, 235, 215, 0.137);
+}
+.mail:focus {
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7), 2px 4px 8px 0px rgba(0, 255, 255, 0.7), 2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7), 2px 4px 8px 0px rgba(0, 255, 255, 0.7), 2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+}
+
+.registration_window_warning.active img {
+  display: none;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.wrap_input_registr_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap_input_registr_login img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(248, 248, 248, 0.705);
+}
+
+.wrap_input_registr_password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap_input_registr_password .close_eye_password {
+  width: 13px;
+  height: 13px;
+  border: none;
+  margin: 1px -15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.wrap_input_registr_password .open_eye_password {
+  width: 13px;
+  height: 13px;
+  border: none;
+  margin: 1px -15px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: none;
+}
+.wrap_input_registr_password img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(248, 248, 248, 0.705);
+}
+
+.close_eye_password.active {
+  display: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.open_eye_password.active {
+  display: block;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.wrap_input_registr_mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap_input_registr_mail img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(248, 248, 248, 0.705);
+}
+
+.wrap_button_lo_and_registr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-right: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wrap_button_lo_and_registr button {
+  cursor: pointer;
+  margin-left: 3px;
+  color: #e6b333;
+  margin-right: 5px;
+  padding: 2px;
+  background-color: rgba(250, 235, 215, 0.068);
+}
+.wrap_button_lo_and_registr button:hover {
+  background-color: rgba(250, 235, 215, 0.233);
+}
+.wrap_button_lo_and_registr button a {
+  color: #e6b333;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.068);
+}
+
+.restore_password_and_toComeIn {
+  top: 20px;
+  height: 50px;
+  position: relative;
+  margin-right: 10px;
+  color: rgba(248, 248, 248, 0.705);
+}
+.restore_password_and_toComeIn span {
+  color: #e6b333;
+}
+.restore_password_and_toComeIn h5 {
+  margin: 0px;
+  cursor: pointer;
+  margin-left: 10px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.restore_password_and_toComeIn h5:hover {
+  color: #e6b333;
+  font-weight: normal;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.restore_password_and_toComeIn a {
+  color: #e6b333;
+  text-decoration: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.restore_password_and_toComeIn a:hover {
+  color: gold;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.forgot_your_password_mail {
+  display: none;
+}
+.forgot_your_password_mail img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(248, 248, 248, 0.705);
+}
+
+.forgot_your_password_mail.active {
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button_remove_vanich_mail {
+  border: none;
+  width: 40px;
+  height: 18px;
+  padding: 1px;
+  color: #e6b333;
+  margin-left: 2px;
+  margin-bottom: 8px;
+  background-color: rgba(250, 235, 215, 0.137);
+}
+.button_remove_vanich_mail:hover {
+  cursor: pointer;
+  background-color: rgba(248, 5, 5, 0.295);
+}
+
+.forgot_password {
+  top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vanich_forgot_password_id.active {
+  display: none;
+}
+
+.button_remove_vanich {
+  margin-left: 2px;
+}
+
+.login_using {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap_zone_login_using {
+  top: 20px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wrap_zone_login_using a {
+  visibility: hidden;
+  margin-left: 20px;
+}
+.wrap_zone_login_using a img {
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.wrap_zone_login_using a img:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.wrap_zone_login_using.active {
+  opacity: 1;
+}
+.wrap_zone_login_using.active a {
+  visibility: visible;
+}
+
+.wrap_zone_login_using.vanich {
+  -webkit-animation: vanich 7s ease forwards;
+          animation: vanich 7s ease forwards;
+}
+
+@-webkit-keyframes vanichTelegram {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+
+@keyframes vanichTelegram {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes vanichInstagram {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+@keyframes vanichInstagram {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes vanichTwitter {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+@keyframes vanichTwitter {
+  from {
+    opacity: 1;
+    top: 1px;
+    position: relative;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    position: relative;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes vanich {
+  from {
+    opacity: 1;
+    top: 20px;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    visibility: hidden;
+  }
+}
+@keyframes vanich {
+  from {
+    opacity: 1;
+    top: 20px;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 80px;
+    visibility: hidden;
+  }
+}
+.telegram.active {
+  -webkit-animation: vanichTelegram 3s ease forwards;
+          animation: vanichTelegram 3s ease forwards;
+}
+
+.instagram.active {
+  -webkit-animation: vanichInstagram 4s ease forwards;
+          animation: vanichInstagram 4s ease forwards;
+}
+
+.twitter.active {
+  -webkit-animation: vanichTwitter 6s ease forwards;
+          animation: vanichTwitter 6s ease forwards;
+}
+
+.foter_form_regist_window {
+  left: 10px;
+  top: 205px;
+  font-size: small;
+  position: relative;
+  color: rgba(248, 248, 248, 0.705);
+}
+
+.remember_data {
+  left: 50px;
+  bottom: 20px;
+  position: relative;
+}
+
+.foter_form_regist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  max-width: 40px;
+  min-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7), 1px 2px 4px 0px rgba(255, 0, 0, 0.7);
+          box-shadow: 0px 1px 2px 0px rgba(255, 0, 0, 0.7), 1px 2px 4px 0px rgba(255, 0, 0, 0.7);
+}
+.foter_form_regist:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.foter_form_regist img {
+  width: 10px;
+  height: 10px;
+}
+.foter_form_regist .check_mark {
+  z-index: 1;
+  left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.foter_form_regist .cross {
+  z-index: 1;
+  left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.foter_form_regist.active {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  border: 1px solid rgba(102, 255, 0, 0.7);
+  -webkit-box-shadow: 0px 1px 2px 0px rgb(21, 255, 0), 1px 2px 4px 0px rgb(21, 255, 0);
+          box-shadow: 0px 1px 2px 0px rgb(21, 255, 0), 1px 2px 4px 0px rgb(21, 255, 0);
+}
+
+.content_footer {
+  z-index: 5;
+  width: 10px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 21px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: rgb(245, 4, 4);
+}
+
+.content_footer.yes {
+  right: 0;
+  background-color: rgb(21, 255, 0);
+}
+
+.line_top {
+  width: 55px;
+  height: 1px;
+  bottom: 208px;
+  left: 50px;
+  position: relative;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  background-color: gold;
+}
+
+.line_left {
+  width: 1px;
+  height: 55px;
+  bottom: 180px;
+  margin-right: -47px;
+  position: relative;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  background-color: gold;
+}
+
+.line_right {
+  width: 1px;
+  height: 55px;
+  bottom: -175px;
+  margin-left: -50px;
+  position: relative;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  background-color: gold;
+}
+
+.line_bottom {
+  width: 55px;
+  height: 1px;
+  bottom: -205px;
+  left: -50px;
+  position: relative;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  background-color: gold;
+}
