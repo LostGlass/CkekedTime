@@ -20,11 +20,13 @@ startTimerOnClick.addEventListener("click", () => {
   stopTimerOnClick.classList.add("active");
   startTimerOnClick.classList.add("active");
 });
+
 stopTimerOnClick.addEventListener("click", () => {
   stopTime();
   startTimerOnClick.classList.remove("active");
   stopTimerOnClick.classList.remove("active");
 });
+
 stopTimerOnClick.addEventListener("click", () => {
   if (cheked == 1) {
     showPopUpIcons.classList.add("active");
@@ -72,7 +74,7 @@ var h = 1,
 function stopTime() {
   startStopTime = false;
   main_timerID.classList.remove("active");
-  console.log(startStopTime);
+  console.log(startStopTime, "&");
   document.getElementById("timer_wariableJS").innerHTML = readout;
 }
 
@@ -169,3 +171,7 @@ function StartTIME() {
   }
 }
 // БЛОК СИСТЕМЫ ОТСЧЕТА(КОНЕЦ)//
+
+//БЛОК СОХРАНЕНИЯ ДАННЫХ ВРЕМЕНИ ПОЛЬЗОВАТЕЛЯЯ (НАЧАЛО)//
+
+//БЛОК СОХРАНЕНИЯ ДАННЫХ ВРЕМЕНИ ПОЛЬЗОВАТЕЛЯЯ (КОНЕЦ)//
