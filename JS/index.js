@@ -28,10 +28,7 @@ stopTimerOnClick.addEventListener("click", () => {
 });
 
 stopTimerOnClick.addEventListener("click", () => {
-  if (cheked == 1) {
-    showPopUpIcons.classList.add("active");
-    cheked = 0;
-  }
+  showPopUpIcons.classList.add("active");
 });
 closeUpIcons.addEventListener("click", () => {
   action_confirmation.classList.add("active");
@@ -50,6 +47,13 @@ resetTimePopUpIcons.addEventListener("click", () => {
   ClearСlock();
 });
 
+saveTime.addEventListener("click", () => {
+  seveTimeUser(readout);
+  showPopUpIcons.classList.remove("active");
+  ClearСlock();
+  action_confirmation.classList.remove("active");
+});
+
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (КОНЕЦ)//
 
 // БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(НАЧАЛО)//
@@ -63,9 +67,12 @@ var h = 1,
   tm = 1,
   s = 0,
   ts = 0,
-  ms = 0,
-  cheked = 0;
+  ms = 0;
 // init = 0;
+function seveTimeUser(readout) {
+  const date = new Date();
+  return localStorage.setItem(date.toLocaleDateString(), readout);
+}
 
 // БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(КОНЕЦ)//
 
@@ -74,7 +81,6 @@ var h = 1,
 function stopTime() {
   startStopTime = false;
   main_timerID.classList.remove("active");
-  console.log(startStopTime, "&");
   document.getElementById("timer_wariableJS").innerHTML = readout;
 }
 

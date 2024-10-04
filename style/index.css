@@ -1,3 +1,8 @@
+::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +22,32 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.button_stop_time.active {
+  display: block;
+}
+
+.button_start_time.active {
+  display: none;
+}
+
+.action_confirmation.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pop_up_icons.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap_button_action_confirmation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .global_wrap_time {
@@ -437,28 +468,50 @@ body {
   display: inline;
 }
 
-.button_stop_time.active {
-  display: block;
+.time_block_control_container {
+  right: 20px;
+  top: 20px;
+  width: 330px;
+  height: 500px;
+  color: white;
+  overflow: scroll;
+  position: absolute;
+  padding: 30px 10px 0px 10px;
+  -webkit-box-shadow: 0px 12px 20px 0px gold;
+          box-shadow: 0px 12px 20px 0px gold;
+  background-color: rgba(124, 14, 124, 0.658);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #e6b333;
+}
+.time_block_control_container div {
+  margin-top: 5px;
+  border-bottom: 1px solid rgb(185, 64, 8);
 }
 
-.button_start_time.active {
-  display: none;
+.time_control_window_roll_up_and_roll_down_unit {
+  width: 350px;
+  height: 20px;
+  right: 21px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  top: 20px;
+  background-color: #e6b333;
+  bottom: 0;
+  position: absolute;
+  overflow-y: hidden;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border-bottom: 1px solid gold;
 }
-
-.action_confirmation.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.pop_up_icons.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.wrap_button_action_confirmation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.time_control_window_roll_up_and_roll_down_unit:hover {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  -webkit-box-shadow: 0px 8px 25px 4px gold;
+          box-shadow: 0px 8px 25px 4px gold;
+  -webkit-box-shadow: 0px 8px 30px 6px gold;
+          box-shadow: 0px 8px 30px 6px gold;
 }
