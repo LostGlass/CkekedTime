@@ -475,20 +475,25 @@ div{
   border-bottom: 1px solid gold;
 
  &:hover{
+
   transition: 0.5s all;
   box-shadow: 0px 8px  20px 2px gold;
   box-shadow: 0px 8px  25px 4px gold;
   box-shadow: 0px 8px  30px 6px gold;
+
   img{
     transition: 0.5s all;
     box-shadow: 1px 1px  15px 5px white;
     box-shadow: 2px 2px  16px 6px white;
     box-shadow: 3px 3px  17px 7px white;
-    border:2px solid white  transparent;
+    outline: 2px solid white ;
   }
+
  }
 
+
  span{
+
   padding: 20px;
   transition: 0.5s all;
   border-left: 5px dotted white ;
@@ -497,6 +502,7 @@ div{
  }
  
  .ikons_time_control_window_roll{
+
   width: 25px;
   bottom:1px ;
   left: 50px;
@@ -504,11 +510,13 @@ div{
   position: relative;
   border-radius: 20px;
   transition: 0.5s all;
+
 }
 
 }
 
 .ikons_time_control_window_roll.active{
+
   transition: 0.5s all;
   transform: rotate(180deg);
 }

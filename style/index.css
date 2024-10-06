@@ -542,7 +542,7 @@ body {
           box-shadow: 2px 2px 16px 6px white;
   -webkit-box-shadow: 3px 3px 17px 7px white;
           box-shadow: 3px 3px 17px 7px white;
-  border: 2px solid white transparent;
+  outline: 2px solid white;
 }
 .time_control_window_roll_up_and_roll_down_unit span {
   padding: 20px;
