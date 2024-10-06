@@ -10,10 +10,24 @@ var resetTimePopUpIcons = document.getElementById("ResetTime");
 var actionConfirmationYes = document.getElementById("action_confirmation_yes");
 var main_timerID = document.getElementById("main_timer");
 var actionConfirmationNo = document.getElementById("action_confirmation_no");
+var timeBlock = document.getElementById("time_block_control_container_id");
+var timeControlWindowRoll = document.getElementById(
+  "time_control_window_roll_up_and_roll_down_unit_id"
+);
+var ikonsTimeControlWindowRoll = document.getElementById(
+  "ikons_time_control_window_roll_id"
+);
+
+/////
 
 // БЛОК С ID (КОНЕЦ)//
 
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (НАЧАЛО)//
+
+timeControlWindowRoll.addEventListener("click", () => {
+  timeBlock.classList.toggle("active");
+  ikonsTimeControlWindowRoll.classList.toggle("active");
+});
 
 startTimerOnClick.addEventListener("click", () => {
   StartStop();

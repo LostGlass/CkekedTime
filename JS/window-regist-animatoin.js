@@ -17,10 +17,11 @@ var buttonRemoveVanichMailId = document.getElementById(
 var telegramId = document.getElementById("telegram");
 var instagramId = document.getElementById("instagram");
 var twitterId = document.getElementById("twitter");
-
 var openEyeId = document.getElementById("open_eyeId");
 var closeEyeId = document.getElementById("close_eyeId");
+////
 
+////
 ////chek registr_user(Придумать как оптимизироваит функции и убрать гору ИФОВ)//////
 var inputLoginId = document.getElementById("input_login");
 var inputPasswordId = document.getElementById("input_password");

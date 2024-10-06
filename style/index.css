@@ -472,7 +472,7 @@ body {
   right: 20px;
   top: 20px;
   width: 330px;
-  height: 500px;
+  height: 0px;
   color: white;
   overflow: scroll;
   position: absolute;
@@ -483,26 +483,44 @@ body {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   border: 1px solid #e6b333;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 .time_block_control_container div {
   margin-top: 5px;
   border-bottom: 1px solid rgb(185, 64, 8);
 }
 
-.time_control_window_roll_up_and_roll_down_unit {
-  width: 350px;
-  height: 20px;
-  right: 21px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 8px 20px 2px gold;
-          box-shadow: 0px 8px 20px 2px gold;
-  top: 20px;
-  background-color: #e6b333;
-  bottom: 0;
-  position: absolute;
-  overflow-y: hidden;
+.time_block_control_container.active {
+  height: 500px;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+}
+
+.time_control_window_roll_up_and_roll_down_unit {
+  bottom: 0;
+  top: 20px;
+  right: 21px;
+  width: 350px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  cursor: pointer;
+  overflow-y: hidden;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 8px 20px 2px gold;
+          box-shadow: 0px 8px 20px 2px gold;
+  background-color: #e6b333;
   border-bottom: 1px solid gold;
 }
 .time_control_window_roll_up_and_roll_down_unit:hover {
@@ -514,4 +532,39 @@ body {
           box-shadow: 0px 8px 25px 4px gold;
   -webkit-box-shadow: 0px 8px 30px 6px gold;
           box-shadow: 0px 8px 30px 6px gold;
+}
+.time_control_window_roll_up_and_roll_down_unit:hover img {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-shadow: 1px 1px 15px 5px white;
+          box-shadow: 1px 1px 15px 5px white;
+  -webkit-box-shadow: 2px 2px 16px 6px white;
+          box-shadow: 2px 2px 16px 6px white;
+  -webkit-box-shadow: 3px 3px 17px 7px white;
+          box-shadow: 3px 3px 17px 7px white;
+  border: 2px solid white transparent;
+}
+.time_control_window_roll_up_and_roll_down_unit span {
+  padding: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border-left: 5px dotted white;
+  border-right: 5px dotted white;
+}
+.time_control_window_roll_up_and_roll_down_unit .ikons_time_control_window_roll {
+  width: 25px;
+  bottom: 1px;
+  left: 50px;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.ikons_time_control_window_roll.active {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }

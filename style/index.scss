@@ -434,7 +434,7 @@ display: inline;
   right:20px;
   top: 20px;
   width: 330px;
-  height: 500px;
+  height: 0px;
   color: white;
   overflow: scroll;
   position: absolute;
@@ -444,28 +444,34 @@ display: inline;
   border-bottom-left-radius: 12px ;
   border-bottom-right-radius: 12px ;
   border: 1px solid  $borderCalor;
-
+  transition: 0.5s all;
 div{
   margin-top: 5px;
   border-bottom: 1px solid rgb(185, 64, 8);
 }
 
-
+}
+.time_block_control_container.active{
+  height: 500px;
+  transition: 0.5s all;
 }
 
-
 .time_control_window_roll_up_and_roll_down_unit{
+  bottom: 0;
+  top: 20px;
+  right:21px;
   width: 350px;
   height: 20px;
-  right:21px;
+  display: flex;
+  color: white;
   cursor: pointer;
-  box-shadow: $mainBoxShadow;
-  top: 20px;
-  background-color: $borderCalor;
-  bottom: 0;
+  overflow-y:hidden;
   position: absolute;
-  overflow-y:hidden ;
+  align-items: center;
   transition: 0.5s all;
+  justify-content: center;
+  box-shadow: $mainBoxShadow;
+  background-color: $borderCalor;
   border-bottom: 1px solid gold;
 
  &:hover{
@@ -473,11 +479,40 @@ div{
   box-shadow: 0px 8px  20px 2px gold;
   box-shadow: 0px 8px  25px 4px gold;
   box-shadow: 0px 8px  30px 6px gold;
-
+  img{
+    transition: 0.5s all;
+    box-shadow: 1px 1px  15px 5px white;
+    box-shadow: 2px 2px  16px 6px white;
+    box-shadow: 3px 3px  17px 7px white;
+    border:2px solid white  transparent;
+  }
  }
 
+ span{
+  padding: 20px;
+  transition: 0.5s all;
+  border-left: 5px dotted white ;
+  border-right: 5px dotted white ;
 
+ }
+ 
+ .ikons_time_control_window_roll{
+  width: 25px;
+  bottom:1px ;
+  left: 50px;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  transition: 0.5s all;
+}
 
 }
+
+.ikons_time_control_window_roll.active{
+  transition: 0.5s all;
+  transform: rotate(180deg);
+}
+
+
 
 // time_block_control_container
