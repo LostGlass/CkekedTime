@@ -485,6 +485,8 @@ body {
   border: 1px solid #e6b333;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .time_block_control_container div {
   margin-top: 5px;
@@ -567,4 +569,22 @@ body {
   transition: 0.5s all;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.button_delete_time_save_vindow {
+  font-size: 13px;
+  padding: 0px 5px 0px 5px;
+  margin: 10px 5px 5px 10px;
+  color: white;
+  background-color: black;
+  outline: 1px solid red;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.button_delete_time_save_vindow:hover {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: red;
 }

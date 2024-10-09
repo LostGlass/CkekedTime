@@ -445,6 +445,8 @@ display: inline;
   border-bottom-right-radius: 12px ;
   border: 1px solid  $borderCalor;
   transition: 0.5s all;
+   backdrop-filter: blur(10px);
+
 div{
   margin-top: 5px;
   border-bottom: 1px solid rgb(185, 64, 8);
@@ -473,6 +475,7 @@ div{
   box-shadow: $mainBoxShadow;
   background-color: $borderCalor;
   border-bottom: 1px solid gold;
+  
 
  &:hover{
 
@@ -516,9 +519,25 @@ div{
 }
 
 .ikons_time_control_window_roll.active{
-
   transition: 0.5s all;
   transform: rotate(180deg);
+}
+
+.button_delete_time_save_vindow{
+  font-size: 13px;
+  padding: 0px 5px 0px 5px;
+  margin: 10px 5px 5px 10px;
+  color: white;
+  background-color:black;
+  outline: 1px solid red;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s all;
+  &:hover{
+  transition: 0.5s all;
+  background-color:red;
+  }
+  
 }
 
 

@@ -17,10 +17,56 @@ var timeControlWindowRoll = document.getElementById(
 var ikonsTimeControlWindowRoll = document.getElementById(
   "ikons_time_control_window_roll_id"
 );
-
-/////
-
 // БЛОК С ID (КОНЕЦ)//
+
+// БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(НАЧАЛО)//
+var startStopTime = Boolean;
+var base = 60;
+var clocktimer, dateObj, dh, dm, ds, ms;
+var readout = "";
+var objectSavingTimeDataToLocalStorage = [];
+var h = 1,
+  m = 1,
+  tm = 1,
+  s = 0,
+  ts = 0,
+  ms = 0;
+// init = 0;
+
+// БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(КОНЕЦ)//
+function seveTimeUser(readout) {
+  const date = new Date();
+  return localStorage.setItem(date.toLocaleDateString(), readout);
+}
+
+function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
+  const date = new Date();
+  const newDiv = document.createElement("div");
+  const buttonDeleteTime = document.createElement("button");
+  const theLastChild = timeBlock.lastChild;
+  const theLastChildNewDiv = newDiv.lastChild;
+  buttonDeleteTime.innerHTML = "Delete";
+  buttonDeleteTime.classList.add("button_delete_time_save_vindow");
+  newDiv.innerHTML = `<span>${date.toLocaleDateString()} --- ${readout}</span>`;
+  timeBlock.insertBefore(newDiv, theLastChild);
+  newDiv.insertBefore(buttonDeleteTime, theLastChildNewDiv);
+  return objectSavingTimeDataToLocalStorage.push(
+    buttonDeleteTime,
+    theLastChild,
+    theLastChildNewDiv,
+    newDiv,
+    timeBlock,
+    readout
+  );
+}
+
+function savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage) {
+  const date = new Date();
+  return localStorage.setItem(
+    date.toLocaleDateString(),
+    objectSavingTimeDataToLocalStorage
+  );
+}
 
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (НАЧАЛО)//
 
@@ -61,34 +107,23 @@ resetTimePopUpIcons.addEventListener("click", () => {
   ClearСlock();
 });
 
+// /////////+/
+
 saveTime.addEventListener("click", () => {
   seveTimeUser(readout);
-  showPopUpIcons.classList.remove("active");
+  generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage);
+  savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage);
+  // console.log(objectSavingTimeDataToLocalStorage);
   ClearСlock();
+  showPopUpIcons.classList.remove("active");
   action_confirmation.classList.remove("active");
 });
 
+localStorage.getItem("08.10.2024");
+console.log(localStorage.getItem("08.10.2024"));
+// /////////+/
+
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (КОНЕЦ)//
-
-// БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(НАЧАЛО)//
-
-var startStopTime = Boolean;
-var base = 60;
-var clocktimer, dateObj, dh, dm, ds, ms;
-var readout = "";
-var h = 1,
-  m = 1,
-  tm = 1,
-  s = 0,
-  ts = 0,
-  ms = 0;
-// init = 0;
-function seveTimeUser(readout) {
-  const date = new Date();
-  return localStorage.setItem(date.toLocaleDateString(), readout);
-}
-
-// БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(КОНЕЦ)//
 
 // БЛОК СИСТЕМЫ ОТСЧЕТА(НАЧАЛО)//
 
