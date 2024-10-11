@@ -50,7 +50,7 @@ function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
   newDiv.innerHTML = `<span>${date.toLocaleDateString()} --- ${readout}</span>`;
   timeBlock.insertBefore(newDiv, theLastChild);
   newDiv.insertBefore(buttonDeleteTime, theLastChildNewDiv);
-  return objectSavingTimeDataToLocalStorage.push(
+  objectSavingTimeDataToLocalStorage.push(
     buttonDeleteTime,
     theLastChild,
     theLastChildNewDiv,
@@ -58,13 +58,14 @@ function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
     timeBlock,
     readout
   );
+  return objectSavingTimeDataToLocalStorage;
 }
 
 function savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage) {
   const date = new Date();
   return localStorage.setItem(
     date.toLocaleDateString(),
-    objectSavingTimeDataToLocalStorage
+    JSON.stringify(objectSavingTimeDataToLocalStorage)
   );
 }
 
@@ -113,14 +114,13 @@ saveTime.addEventListener("click", () => {
   seveTimeUser(readout);
   generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage);
   savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage);
-  // console.log(objectSavingTimeDataToLocalStorage);
+  console.log(JSON.parse(localStorage.getItem("11.10.2024")));
   ClearСlock();
   showPopUpIcons.classList.remove("active");
   action_confirmation.classList.remove("active");
 });
 
-localStorage.getItem("08.10.2024");
-console.log(localStorage.getItem("08.10.2024"));
+// console.log(JSON.parse(localStorage.getItem("08.10.2024")));
 // /////////+/
 
 // БЛОК С АКТИВНЫМИ СОБЫТИЯМИ (КОНЕЦ)//
