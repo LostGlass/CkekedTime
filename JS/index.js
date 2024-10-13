@@ -34,10 +34,6 @@ var h = 1,
 // init = 0;
 
 // БЛОК ОБЬЯВЛЕНИЯ ДАННЫХ(КОНЕЦ)//
-function seveTimeUser(readout) {
-  const date = new Date();
-  return localStorage.setItem(date.toLocaleDateString(), readout);
-}
 
 function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
   const date = new Date();
@@ -51,12 +47,12 @@ function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
   timeBlock.insertBefore(newDiv, theLastChild);
   newDiv.insertBefore(buttonDeleteTime, theLastChildNewDiv);
   objectSavingTimeDataToLocalStorage.push(
-    buttonDeleteTime,
-    theLastChild,
-    theLastChildNewDiv,
-    newDiv,
-    timeBlock,
-    readout
+    { buttonDeleteTime },
+    { theLastChild },
+    { theLastChildNewDiv },
+    { newDiv },
+    { timeBlock },
+    { readout }
   );
   return objectSavingTimeDataToLocalStorage;
 }
@@ -111,10 +107,9 @@ resetTimePopUpIcons.addEventListener("click", () => {
 // /////////+/
 
 saveTime.addEventListener("click", () => {
-  seveTimeUser(readout);
   generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage);
   savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage);
-  console.log(JSON.parse(localStorage.getItem("11.10.2024")));
+  console.log(JSON.parse(localStorage.getItem("13.10.2024")));
   ClearСlock();
   showPopUpIcons.classList.remove("active");
   action_confirmation.classList.remove("active");
