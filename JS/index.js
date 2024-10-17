@@ -24,7 +24,7 @@ var startStopTime = Boolean;
 var base = 60;
 var clocktimer, dateObj, dh, dm, ds, ms;
 var readout = "";
-var objectSavingTimeDataToLocalStorage = [];
+var objectSavingTimeDataToLocalStorage = {};
 var h = 1,
   m = 1,
   tm = 1,
@@ -46,19 +46,14 @@ function generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage) {
   newDiv.innerHTML = `<span>${date.toLocaleDateString()} --- ${readout}</span>`;
   timeBlock.insertBefore(newDiv, theLastChild);
   newDiv.insertBefore(buttonDeleteTime, theLastChildNewDiv);
-  objectSavingTimeDataToLocalStorage.push(
-    { buttonDeleteTime },
-    { theLastChild },
-    { theLastChildNewDiv },
-    { newDiv },
-    { timeBlock },
-    { readout }
-  );
-  return objectSavingTimeDataToLocalStorage;
-}
-
-function savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage) {
-  const date = new Date();
+  objectSavingTimeDataToLocalStorage = {
+    buttonDeleteTime,
+    theLastChild,
+    theLastChildNewDiv,
+    newDiv,
+    timeBlock,
+    readout,
+  };
   return localStorage.setItem(
     date.toLocaleDateString(),
     JSON.stringify(objectSavingTimeDataToLocalStorage)
@@ -108,8 +103,7 @@ resetTimePopUpIcons.addEventListener("click", () => {
 
 saveTime.addEventListener("click", () => {
   generateSaveTimeBloc(readout, objectSavingTimeDataToLocalStorage);
-  savingTimeDataToLocalStorage(objectSavingTimeDataToLocalStorage);
-  console.log(JSON.parse(localStorage.getItem("13.10.2024")));
+  console.log(JSON.parse(localStorage.getItem("17.10.2024")));
   ClearСlock();
   showPopUpIcons.classList.remove("active");
   action_confirmation.classList.remove("active");
