@@ -57,23 +57,23 @@ function funcAnimationInputPasswordCalor() {
 }
 
 /////////////////////////
+try {
+  button_registr_sitId.addEventListener("click", () => {
+    //Сделать очищение полей инпут от тени при отправки данных из инпутов//
 
-button_registr_sitId.addEventListener("click", () => {
-  //Сделать очищение полей инпут от тени при отправки данных из инпутов//
-
-  if (
-    inputLoginId.value.length >= 4 &&
-    inputPasswordId.value.length >= 4 &&
-    inputLoginId.value.length <= 10 &&
-    inputPasswordId.value.length <= 10
-  ) {
-  } else {
-    alert(
-      "Логин и пароль должны быть не менее четырех(4) и не больше десяти(10) символов!"
-    );
-  }
-});
-
+    if (
+      inputLoginId.value.length >= 4 &&
+      inputPasswordId.value.length >= 4 &&
+      inputLoginId.value.length <= 10 &&
+      inputPasswordId.value.length <= 10
+    ) {
+    } else {
+      alert(
+        "Логин и пароль должны быть не менее четырех(4) и не больше десяти(10) символов!"
+      );
+    }
+  });
+} catch {}
 ////chek registr_user//////
 
 ////////////////////////////////////////////////////////////////////

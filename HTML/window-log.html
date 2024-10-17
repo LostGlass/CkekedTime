@@ -10,10 +10,10 @@
     <span class="line_left"></span>
     <span class="line_top"></span>
     <div class="wrap_registr_form" id="parental_hover_id">
+      <div class="Heading_regisr_form" style="position: relative; top: 15px">
+        <h3>Sign in</h3>
+      </div>
       <div class="position_registration_window">
-        <div class="Heading_regisr_form">
-          <h3>Sign in</h3>
-        </div>
         <div class="wrap_input_registr">
           <div class="wrap_input_registr_login">
             <img src="/style/IMG/ikons/login.png" alt="login ikons" />
@@ -40,32 +40,36 @@
             />
             <img
               src="/style/IMG/ikons/clos_Eye.png"
-              alt="crossed-eye icon close-eye"
+              alt="crossed-eye icon"
               class="close_eye_password"
               id="close_eyeId"
               title="Show password"
             />
             <img
               src="/style/IMG/ikons/open_Eye.png"
-              alt="crossed-eye icon open-eye"
+              alt="crossed-eye icon"
               class="open_eye_password"
               id="open_eyeId"
               title="Hide password"
             />
           </div>
           <div class="wrap_button_lo_and_registr">
-            <div class="button_log">
-              <button>Login to the site</button>
-            </div>
-            <div>
-              <button>
-                <a href="/HTML/window-registr-user.html"
-                  >Back to registration</a
-                >
+            <div class="button_registr">
+              <button id="button_registr_site">Register on the site</button>
+              <button
+                style="
+                  position: relative;
+                  right: 10px;
+                  padding: 2px;
+                  height: 22px;
+                "
+              >
+                <a href="/HTML/window-registr-user.html">Back</a>
               </button>
             </div>
           </div>
         </div>
+
         <div class="restore_password_and_toComeIn">
           <div class="login_using">
             <h5 style="margin-left: 18px" id="login_using">
@@ -114,22 +118,22 @@
             /></a>
           </div>
         </div>
-        <footer
-          class="foter_form_regist_window"
-          style="top: 168px; position: relative"
-        >
-          <div class="foter_form_regist">
-            <div class="cross" id="dont_save">
-              <img src="/style/IMG/ikons/close.png" alt="Cross icon" />
-            </div>
-            <div class="check_mark" id="save">
-              <img src="/style/IMG/ikons/galoschka.png" alt="check mark icon" />
-            </div>
-            <div class="content_footer" id="save_or_not"></div>
+      </div>
+      <footer
+        class="foter_form_regist_window"
+        style="top: 188px; position: relative"
+      >
+        <div class="foter_form_regist" id="retention_selection_stroke_given">
+          <div class="cross" id="dont_save">
+            <img src="/style/IMG/ikons/close.png" alt="Cross icon" />
           </div>
-          <div class="remember_data">Remember my details when registering</div>
-        </footer>
-      <!-- </div> -->
+          <div class="check_mark" id="save">
+            <img src="/style/IMG/ikons/galoschka.png" alt="check mark icon" />
+          </div>
+          <div class="content_footer" id="save_or_not"></div>
+        </div>
+        <div class="remember_data">Remember my details when registering</div>
+      </footer>
     </div>
     <span class="line_bottom"></span>
     <span class="line_right"></span>

@@ -540,6 +540,28 @@ div{
   
 }
 
+.exit_in_registration{
+  top: 20px;
+  left: 30px;
+  width: 30px;
+  padding: 4px;
+  height: auto;
+  position: absolute;
+border-radius: 8px;
+transition: 0.5s all;
 
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  &:hover{
+    transition: 0.5s all;
+    cursor: pointer;
+    box-shadow: 1px 1px  15px 5px white;
+    box-shadow: 2px 2px  16px 6px white;
+    box-shadow: 3px 3px  17px 7px white;
+    outline: 1px solid white ;
+  }
+}
 
 // time_block_control_container
